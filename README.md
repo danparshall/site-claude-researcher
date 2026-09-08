@@ -1,8 +1,8 @@
-# clauderesearcher.com
+# clauderesearch.ai
 
 Public website for [`claude_researcher`](https://github.com/danparshall/claude_researcher) — the friendly, non-developer entry point ([claude_researcher#11](https://github.com/danparshall/claude_researcher/issues/11)).
 
-Static HTML/CSS with one tiny inline script (copy-to-clipboard). No build tools. Hosted on GitHub Pages at `clauderesearcher.com`.
+Static HTML/CSS with one tiny inline script (copy-to-clipboard). No build tools. Hosted on GitHub Pages at `clauderesearch.ai`.
 
 ## Design notes
 
