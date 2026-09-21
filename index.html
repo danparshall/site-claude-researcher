@@ -129,8 +129,9 @@ Fetch https://raw.githubusercontent.com/danparshall/claude_researcher/main/READM
 				<strong>Public workflow instructions.</strong> At the start of each session, Claude
 				fetches its working rules from the public
 				<a href="https://github.com/danparshall/claude_researcher">claude_researcher</a> repo.
-				Every session runs the same canonical, inspectable playbook — and fixes propagate to
-				everyone automatically.
+				Everyone runs the same public instructions, so a fix reaches every user at their next
+				session. That reach is the reason the instructions are kept in the open. See
+				<a href="#privacy">Where does my data live</a> below.
 			</li>
 		</ul>
 		<p>
@@ -155,21 +156,26 @@ Fetch https://raw.githubusercontent.com/danparshall/claude_researcher/main/READM
 	</section>
 
 	<section id="privacy">
-		<h2>Is my data private?</h2>
+		<h2>Where does my data live, and who can see it?</h2>
 		<p>
-			Yes. Your repositories are private to your GitHub account. The token that grants access
-			exists only in your claude.ai Project settings, and you can revoke it from GitHub at any
-			time. Nothing about this project routes your data through us — there is no server of ours,
-			no analytics, no account with us at all. We literally could not read your work if we
-			wanted to.
+			Your work lives in private repositories on your own GitHub account. There is no server
+			of ours in the loop, no analytics, and no account with us. Nothing you write is sent to us.
 		</p>
 		<p>
-			And the flip side of that coin: all of the guidelines about how this framework functions
-			are open-source, so you can tell exactly what instructions Claude is getting. The
-			workflow files, the setup script, the skills — all of it sits in the open at
-			<a href="https://github.com/danparshall/claude_researcher">github.com/danparshall/claude_researcher</a>.
-			The explainer prompt at the top of this page exists precisely so Claude itself can audit
-			the project for you before you commit to anything.
+			Two companies do hold your data: GitHub stores the repositories, and Anthropic stores
+			your chats, including the access token you put in your Project settings. Each handles it
+			under its own terms. If your material is sensitive enough that either of those is a
+			problem, this toolkit is not the right fit.
+		</p>
+		<p>
+			The part that takes some trust in us is the instructions. At the start of each session,
+			Claude downloads its working rules from our public repository, and then acts on your
+			repositories using your token. If we published bad instructions, or if our account were
+			broken into, Claude could be told to do something you wouldn't want. We can't make that
+			risk zero. What we can do is keep every instruction public, with its full change history,
+			at <a href="https://github.com/danparshall/claude_researcher">github.com/danparshall/claude_researcher</a>,
+			so anyone can check what Claude is being told. The explainer prompt at the top of this
+			page is there so Claude can look all this over for you before you decide.
 		</p>
 	</section>
 
@@ -196,6 +202,10 @@ Fetch https://raw.githubusercontent.com/danparshall/claude_researcher/main/READM
 		<ul>
 			<li>A <a href="https://claude.ai">claude.ai</a> Pro or Team subscription</li>
 			<li>A free <a href="https://github.com">GitHub</a> account</li>
+			<li>
+				A current Claude model. Opus 4.7 and the Claude 5 models work well. Opus 4.8 does not
+				follow the setup reliably, so switch models if that's what you have selected.
+			</li>
 			<li>About 10 minutes for the one-time setup</li>
 			<li>No installation, no terminal, no coding</li>
 		</ul>
