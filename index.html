@@ -122,10 +122,13 @@ Fetch https://raw.githubusercontent.com/danparshall/claude_researcher/main/READM
 			</li>
 			<li>
 				<strong>A GitHub connection.</strong> During setup you connect GitHub to Claude in
-				claude.ai's settings, then install the Claude GitHub App on just your two
-				repositories. claude.ai holds the connection on its side; you never paste a password
-				or token into a chat. Claude can reach only the repositories you selected, and you
-				can revoke access from GitHub at any time.
+				claude.ai's settings, then install the Claude GitHub App. claude.ai holds the
+				connection on its side; you never paste a password or token into a chat. You choose
+				whether the App covers all your repositories or only the ones you select. "All" is
+				simpler, because new research projects need no extra step. "Only select" is the
+				cautious choice if your GitHub account also holds unrelated private work. Either way,
+				each chat works only on repositories it has attached, and you can change or revoke
+				access from GitHub at any time.
 			</li>
 			<li>
 				<strong>Public workflow instructions.</strong> At the start of each session, Claude
@@ -139,17 +142,44 @@ Fetch https://raw.githubusercontent.com/danparshall/claude_researcher/main/READM
 		<p>
 			Setup is a few one-time clicks, and Claude tells you exactly what to click and when:
 		</p>
-		<ol>
-			<li>Allow network access in claude.ai settings (shown below).</li>
-			<li>Connect GitHub to Claude (claude.ai Settings → Connectors → GitHub).</li>
-			<li>Create two private repositories on GitHub and install the Claude GitHub App on them.</li>
-		</ol>
 		<figure>
 			<img src="images/claude_egress_settings.png" loading="lazy"
-				alt="claude.ai Settings, Capabilities pane — the 'Allow network egress' toggle turned on, with the domain allowlist set">
+				alt="claude.ai Settings, Capabilities pane — 'Allow network egress' turned on, with the domain allowlist set to All domains">
 			<figcaption>
-				Allowing network access in claude.ai settings, which lets Claude reach the internet
-				from inside its sandbox.
+				1. Allow network access in claude.ai settings (Settings → Capabilities). This lets
+				Claude reach the internet from inside its sandbox.
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="images/claude_connectors_github.png" loading="lazy"
+				alt="claude.ai Settings, Connectors list — GitHub Integration showing a checkmark as connected">
+			<figcaption>
+				2. Connect GitHub to Claude (Settings → Connectors → GitHub). GitHub asks you to sign
+				in and approve.
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="images/github_new_repo_private.png" loading="lazy"
+				alt="GitHub's Create a new repository page with the visibility menu open and Private highlighted">
+			<figcaption>
+				3. Create two repositories on GitHub, setting each one to <strong>Private</strong>.
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="images/github_app_repo_access.png" loading="lazy"
+				alt="GitHub settings for the Claude app — its permissions, and Repository access with 'All repositories' and 'Only select repositories' options">
+			<figcaption>
+				4. Install the Claude GitHub App, which lets Claude save to your repositories. Choose
+				all repositories or only select ones. The page lists exactly what the App can do.
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="images/claude_permission_mode_auto.png" loading="lazy"
+				alt="claude.ai chat box with the permission mode menu open and Auto selected">
+			<figcaption>
+				5. Optional but recommended: set the chat's permission mode to <strong>Auto</strong>,
+				so you aren't approving every routine step. A safety check still pauses anything that
+				looks unsafe.
 			</figcaption>
 		</figure>
 	</section>

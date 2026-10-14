@@ -7,7 +7,7 @@ Static HTML/CSS with one tiny inline script (copy-to-clipboard). No build tools.
 ## Design notes
 
 - **The human pastes once; the agent hops.** The two paste blocks on the page are self-contained prompts. The setup block tells the agent to fetch the `claude_researcher` README on `main` and follow its Quick-start prompt (which pins a specific commit SHA). This keeps the site drift-free: re-pinning the bootstrap SHA (`tools/repin.py` upstream) never requires touching this repo.
-- **Screenshots** are copies of `claude_researcher/template/reference/screenshots/` (see its `CAPTURED.md` for capture provenance). Re-copy when upstream re-captures.
+- **Screenshots** are meant to mirror `claude_researcher/template/reference/screenshots/` (see its `CAPTURED.md` for capture provenance). The five in `images/` were captured 2026-10-13 for the proxy-only setup and landed here first; copying them upstream is tracked in claude_researcher#85.
 
 ## Local preview
 
