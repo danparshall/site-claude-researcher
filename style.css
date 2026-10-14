@@ -126,7 +126,7 @@ hr.fold {
 	margin: 3rem 0;
 }
 
-ul { padding-left: 1.4rem; }
+ul, ol { padding-left: 1.4rem; }
 li { margin-bottom: 0.6rem; }
 
 figure {
