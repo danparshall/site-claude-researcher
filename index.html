@@ -196,6 +196,110 @@ Fetch https://raw.githubusercontent.com/danparshall/claude_researcher/main/READM
 			under its own terms. If your material is sensitive enough that either of those is a
 			problem, this toolkit is not the right fit.
 		</p>
+		<figure class="flow" aria-labelledby="flow-caption">
+			<svg class="flow-tri" viewBox="0 0 640 560" role="img" aria-labelledby="tri-title tri-desc">
+				<title id="tri-title">Where your data goes</title>
+				<desc id="tri-desc">A triangle. You, in your browser, at the top. Your AI provider at the lower left, holding the chat and Claude's temporary sandbox. GitHub at the lower right, holding your private repositories. You type and upload into the chat and Claude replies; Claude's commands run in the sandbox and their output returns to the chat; the sandbox copies repositories in from GitHub and saves changes back; you can browse or download your repositories on github.com at any time.</desc>
+				<defs>
+					<marker id="tri-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+						<path d="M0 0 L10 5 L0 10 z" class="tri-headfill"/>
+					</marker>
+					<!-- bot icon: Lucide (lucide.dev) v1.59.0, ISC License, Copyright (c) Lucide Contributors -->
+					<symbol id="icon-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
+					<symbol id="icon-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+					<symbol id="logo-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+				</defs>
+
+				<!-- edges -->
+				<line class="tri-edge" x1="290" y1="114" x2="178" y2="344" marker-start="url(#tri-head)" marker-end="url(#tri-head)"/>
+				<text class="tri-label" x="220" y="195" text-anchor="end">you type, upload</text>
+				<text class="tri-label" x="220" y="215" text-anchor="end">Claude replies</text>
+
+				<line class="tri-edge" x1="350" y1="114" x2="498" y2="394" marker-start="url(#tri-head)" marker-end="url(#tri-head)"/>
+				<text class="tri-label" x="428" y="200">browse or download</text>
+				<text class="tri-label" x="428" y="220">on github.com, anytime</text>
+
+				<line class="tri-edge" x1="264" y1="488" x2="406" y2="488" marker-start="url(#tri-head)" marker-end="url(#tri-head)"/>
+				<text class="tri-label" x="336" y="474" text-anchor="middle">copies repos in</text>
+				<text class="tri-label" x="336" y="512" text-anchor="middle">saves changes back</text>
+
+				<!-- you -->
+				<circle class="tri-node-you" cx="320" cy="72" r="44"/>
+				<use href="#icon-user" class="tri-icon" x="298" y="50" width="44" height="44"/>
+				<text class="tri-name" x="320" y="142" text-anchor="middle">You</text>
+				<text class="tri-sub" x="320" y="162" text-anchor="middle">your browser</text>
+
+				<!-- anthropic -->
+				<rect class="tri-group" x="20" y="300" width="244" height="244" rx="12"/>
+				<use href="#icon-bot" class="tri-icon" x="35" y="312" width="28" height="28"/>
+				<text class="tri-name" x="70" y="332">AI provider</text>
+				<rect class="tri-box" x="38" y="350" width="208" height="56" rx="8"/>
+				<text class="tri-boxname" x="142" y="374" text-anchor="middle">The chat</text>
+				<text class="tri-sub" x="142" y="394" text-anchor="middle">your conversation, saved</text>
+				<line class="tri-edge" x1="92" y1="410" x2="92" y2="446" marker-start="url(#tri-head)" marker-end="url(#tri-head)"/>
+				<text class="tri-small" x="106" y="424">commands go down</text>
+				<text class="tri-small" x="106" y="440">output comes back</text>
+				<rect class="tri-box" x="38" y="450" width="208" height="76" rx="8"/>
+				<text class="tri-boxname" x="142" y="474" text-anchor="middle">Claude's sandbox</text>
+				<text class="tri-sub" x="142" y="494" text-anchor="middle">a temporary computer;</text>
+				<text class="tri-sub" x="142" y="512" text-anchor="middle">doesn't carry over</text>
+
+				<!-- github -->
+				<rect class="tri-box" x="410" y="400" width="210" height="130" rx="12"/>
+				<use href="#logo-github" class="tri-logo" x="499" y="410" width="32" height="32"/>
+				<text class="tri-name" x="515" y="466" text-anchor="middle">GitHub</text>
+				<text class="tri-sub" x="515" y="488" text-anchor="middle">your private repositories:</text>
+				<text class="tri-sub" x="515" y="506" text-anchor="middle">the permanent record</text>
+			</svg>
+			<div class="flow-stack">
+			<div class="flow-box">
+				<span class="flow-owner">Yours</span>
+				<h3>Your computer</h3>
+				<p>Just a browser tab. Nothing installs. Your files stay here unless you upload them.</p>
+			</div>
+			<div class="flow-link"><span class="flow-arrow" aria-hidden="true">⇅</span>what you type or upload goes up; Claude's replies come back</div>
+			<div class="flow-group">
+				<span class="flow-owner">AI provider</span>
+				<div class="flow-box">
+					<h3>The chat</h3>
+					<p>Your conversation, saved in your chat history. Anything that reaches the chat, Claude has seen.</p>
+				</div>
+				<div class="flow-link"><span class="flow-arrow" aria-hidden="true">⇅</span>Claude sends commands down; whatever they print comes back up into the chat</div>
+				<div class="flow-box">
+					<h3>Claude's sandbox</h3>
+					<p>A temporary computer for this chat. Claude copies your repositories here, reads files, and runs scripts. It does not carry over to your next chat.</p>
+				</div>
+			</div>
+			<div class="flow-link"><span class="flow-arrow" aria-hidden="true">⇅</span>copies your repositories in; saves changes back, through the connection you approved</div>
+			<div class="flow-box">
+				<span class="flow-owner">GitHub</span>
+				<h3>Your private repositories</h3>
+				<p>The permanent record. This is what your next chat reads to pick up where you left off.</p>
+			</div>
+			</div>
+			<figcaption id="flow-caption">
+				You talk to Claude; Claude works in a temporary sandbox and saves your work to your
+				GitHub repositories, through the connection you approved. Rule of thumb: anything that reaches the chat — what you type, files you upload, and
+				whatever Claude's commands print — Claude has seen, and it is stored with your
+				conversation. A file sitting in the sandbox or on GitHub hasn't been seen until Claude
+				reads it, but it is still on those companies' machines.
+			</figcaption>
+		</figure>
+		<p>
+			<strong>Will my chats be used to train AI models?</strong> That's governed by your model
+			provider's terms of service, not by this toolkit, and those terms and their settings can
+			change. You can ask an agent to read the current terms and translate them from lawyer to
+			English.
+		</p>
+		<p>
+			<strong>Is my repository encrypted on GitHub?</strong> Yes. GitHub has stored repositories
+			on <a href="https://github.blog/changelog/2019-05-23-git-data-encryption-at-rest/">encrypted
+			disks</a> since 2019. That protects against someone walking off with a hard drive. It
+			doesn't protect against the more realistic risks: someone getting into your GitHub account,
+			a repository accidentally switched to public, or a legal demand served on GitHub, which can
+			read your data in order to serve it to you. Turning on two-factor sign-in for GitHub does
+			more for you than encryption at rest.
+		</p>
 		<p>
 			The part that takes some trust in us is the instructions. At the start of each session,
 			Claude downloads its working rules from our public repository, and then acts on your

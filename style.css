@@ -147,6 +147,114 @@ figcaption {
 	margin-top: 0.5rem;
 }
 
+/* ---- Data-flow diagram ---- */
+
+.flow {
+	max-width: 32rem;
+	margin: 2rem auto;
+}
+
+.flow-box,
+.flow-group {
+	position: relative;
+	border-radius: 10px;
+}
+
+.flow-box {
+	background: var(--card);
+	border: 1px solid var(--rule);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	padding: 0.9rem 1.1rem 0.8rem;
+}
+
+.flow-box h3 {
+	font-size: 1.05rem;
+	margin: 0 0 0.2rem;
+}
+
+.flow-box p {
+	font-size: 0.95rem;
+	margin: 0;
+	color: var(--ink-soft);
+}
+
+.flow-group {
+	border: 2px dashed var(--accent);
+	padding: 1.4rem 0.8rem 0.8rem;
+	background: #f3f7fb;
+}
+
+.flow-owner {
+	position: absolute;
+	top: -0.75rem;
+	left: 0.9rem;
+	font-family: system-ui, sans-serif;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #fff;
+	background: var(--accent);
+	border-radius: 4px;
+	padding: 0.1rem 0.45rem;
+}
+
+.flow-box > .flow-owner { background: var(--ink-soft); }
+.flow-box { margin-top: 0.4rem; }
+
+.flow-link {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 0.88rem;
+	font-style: italic;
+	color: var(--ink-soft);
+	padding: 0.55rem 0.4rem 0.55rem 1.3rem;
+	line-height: 1.35;
+}
+
+.flow-arrow {
+	font-style: normal;
+	font-size: 1.4rem;
+	color: var(--accent);
+	flex: none;
+}
+
+.flow figcaption {
+	margin-top: 1rem;
+}
+
+/* Triangle on wider screens; the vertical stack on phones, where the SVG's text would be too small. */
+
+.flow-tri {
+	display: block;
+	width: 100%;
+	height: auto;
+	font-family: system-ui, -apple-system, sans-serif;
+}
+
+.flow-stack { display: none; }
+
+.flow:has(.flow-tri) { max-width: 40rem; }
+
+@media (max-width: 560px) {
+	.flow-tri { display: none; }
+	.flow-stack { display: block; }
+}
+
+.tri-edge { stroke: var(--accent); stroke-width: 2; fill: none; }
+.tri-headfill { fill: var(--accent); }
+.tri-icon { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.tri-logo { fill: #000; stroke: none; }
+.tri-node-you { fill: #eaf1f8; stroke: var(--accent); stroke-width: 2; }
+.tri-group { fill: #f3f7fb; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 7 5; }
+.tri-box { fill: var(--card); stroke: var(--rule); stroke-width: 1.5; }
+.tri-name { font-size: 19px; font-weight: 700; fill: var(--ink); }
+.tri-boxname { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.tri-sub { font-size: 14px; fill: var(--ink-soft); }
+.tri-label { font-size: 15px; font-style: italic; fill: var(--ink-soft); }
+.tri-small { font-size: 12.5px; font-style: italic; fill: var(--ink-soft); }
+
 /* ---- Footer ---- */
 
 footer {
